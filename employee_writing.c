@@ -49,7 +49,7 @@ int main()
     
     emp *temp=head;
     while(temp != NULL){
-        fwrite(&temp,sizeof(temp),1,fp);
+        fwrite(&temp,sizeof(emp),1,fp);
         temp=temp->next;
     }
     fputs("Hello DJ",fp);
