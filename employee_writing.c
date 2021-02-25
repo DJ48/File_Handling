@@ -53,8 +53,8 @@ int main()
     printf("Start writing into file\n");
     create();
     
-    fp=fopen("EmployeeDB","wb");
-    fwrite(&head,sizeof(head),1,fp);
+    fp=fopen("EmployeeDB","w");
+    fwrite(head,sizeof(*head),1,fp);
     fputs("Hello DJ",fp);
     
     display();
