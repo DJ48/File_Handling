@@ -15,8 +15,6 @@ int main()
 {
     FILE *fp;
     
-    create();
-    
     fp=fopen("EmployeeDB","rb");
     fwrite(&head,sizeof(head),1,fp);
     printf("\n--------------Printing Details--------------------\n");
