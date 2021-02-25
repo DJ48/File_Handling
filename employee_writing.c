@@ -25,7 +25,7 @@ emp *createnode(){
 
 void create(){
     int i;
-    for(i=0;i<10;i++){
+    for(i=0;i<3;i++){
         if(i==0){
             head=createnode();
         }
@@ -39,6 +39,14 @@ void create(){
     }
 }
 
+void display(){
+    emp *temp=head;
+    while(temp!=NULL){
+        printf(\n%s\t%s\t%s,temp->empid,temp->empname,temp->company);
+        temp=temp->next;
+    }
+}
+
 int main()
 {
     File *fp;
@@ -48,6 +56,8 @@ int main()
     fp=fopen("EmployeeDB","wb");
     fwrite(&head,sizeof(head),1,fp);
     fputs("Hello DJ",fp);
+    
+    display();
     printf("writing Done into EmployeeDB\n");
     fclose(fp);
     return 0;
