@@ -16,7 +16,7 @@ int main()
     FILE *fp;
     
     fp=fopen("EmployeeDB","rb");
-    fwrite(&head,sizeof(head),1,fp);
+    fwrite(head,sizeof(*head),1,fp);
     printf("\n--------------Printing Details--------------------\n");
     printf("\nEmployee ID:- %s",head->empid);
     printf("\tEmployee Name:- %s",head->empname);
