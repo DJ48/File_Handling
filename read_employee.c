@@ -20,12 +20,12 @@ int main()
     printf("\nEmployee ID:- %s",head->empid);
     printf("\tEmployee Name:- %s",head->empname);
             printf("\tEmployee company:- %s",head->company);
-//     while((fread(head,sizeof(*head),1,fp)==1)){
-//             printf("\nEmployee ID:- %s",head->empid);
-//             printf("\tEmployee Name:- %s",head->empname);
-//             printf("\tEmployee company:- %s",head->company);
-//             head=head->next;
-//     }
+    while(fread(head,sizeof(*head),1,fp)==1){
+            printf("\nEmployee ID:- %s",head->empid);
+            printf("\tEmployee Name:- %s",head->empname);
+            printf("\tEmployee company:- %s",head->company);
+            head=head->next;
+    }
     fclose(fp);
     return 0;
 }
