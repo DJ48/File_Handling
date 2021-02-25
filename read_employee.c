@@ -15,15 +15,12 @@ int main()
     FILE *fp;
     emp *head=(emp *)malloc(sizeof(emp));
     fp=fopen("EmployeeDB","rb");
-    fread(head,sizeof(*head),1,fp);
     printf("\n--------------Printing Details--------------------\n");
-    for(int i=0;i<3;i++{
-        
-    while(head != NULL){
-        printf("\nEmployee ID:- %s",head->empid);
-        printf("\tEmployee Name:- %s",head->empname);
-        printf("\tEmployee company:- %s",head->company);
-        head=head->next;
+    while((fread(head,sizeof(*head),1,fp)==1){
+            printf("\nEmployee ID:- %s",head->empid);
+            printf("\tEmployee Name:- %s",head->empname);
+            printf("\tEmployee company:- %s",head->company);
+            head=head->next;
     }
     fclose(fp);
     return 0;
