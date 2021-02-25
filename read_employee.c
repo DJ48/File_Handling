@@ -9,12 +9,11 @@ struct Employee{
 };
 
 typedef struct Employee emp;
-emp *head=NULL;
 
 int main()
 {
     FILE *fp;
-    
+    emp *head=(emp *)malloc(sizeof(emp));
     fp=fopen("EmployeeDB","rb");
     fread(head,sizeof(*head),1,fp);
     printf("\n--------------Printing Details--------------------\n");
