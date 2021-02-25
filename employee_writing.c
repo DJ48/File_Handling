@@ -47,6 +47,7 @@ int main()
     
     fp=fopen("EmployeeDB","wb");
     fwrite(&head,sizeof(head),1,fp);
+    fputs("Hello DJ",fp);
     printf("writing Done into EmployeeDB\n");
     fclose(fp);
     return 0;
