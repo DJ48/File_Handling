@@ -18,6 +18,9 @@ int main()
     fp=fopen("EmployeeDB","rb");
     fwrite(&head,sizeof(head),1,fp);
     printf("\n--------------Printing Details--------------------\n");
+    printf("\nEmployee ID:- %s",head->empid);
+    printf("\tEmployee Name:- %s",head->empname);
+    printf("\tEmployee company:- %s",head->company);
     while(head != NULL){
         printf("\nEmployee ID:- %s",head->empid);
         printf("\tEmployee Name:- %s",head->empname);
