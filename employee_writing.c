@@ -45,7 +45,7 @@ int main()
     printf("Start writing into file\n");
     create();
     
-    fp=fopen("EmployeeDB","wb");
+    fp=fopen("EmployeeDB","w");
     
     emp *temp=head;
     while(temp != NULL){
