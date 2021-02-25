@@ -20,7 +20,8 @@ int main()
     printf("\nEmployee ID:- %s",head->empid);
     printf("\tEmployee Name:- %s",head->empname);
             printf("\tEmployee company:- %s",head->company);
-    while(fread(head,sizeof(emp),1,fp)==1){
+    while(fread(head,sizeof(emp),1,fp)){
+            printf("hesklk\n");
             printf("\nEmployee ID:- %s",head->empid);
             printf("\tEmployee Name:- %s",head->empname);
             printf("\tEmployee company:- %s",head->company);
