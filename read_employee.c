@@ -15,11 +15,12 @@ int main()
     FILE *fp;
     emp *head=(emp *)malloc(sizeof(emp));
     fp=fopen("EmployeeDB","rb");
-//     fread(head,sizeof(emp),1,fp);
-//     printf("\n--------------Printing Details--------------------\n");
-//     printf("\nEmployee ID:- %s",head->empid);
-//     printf("\tEmployee Name:- %s",head->empname);
-//             printf("\tEmployee company:- %s",head->company);
+    fread(head,sizeof(emp),1,fp);
+    printf("\n--------------Printing Details--------------------\n");
+    printf("\nEmployee ID:- %s",head->empid);
+    printf("\tEmployee Name:- %s",head->empname);
+    printf("\tEmployee company:- %s\n",head->company);
+    printf("%s",head->next->empid);
     while(fread(head,sizeof(emp),1,fp)){
             printf("hesklk\n");
             printf("\nEmployee ID:- %s",head->empid);
