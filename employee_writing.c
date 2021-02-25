@@ -49,7 +49,7 @@ void display(){
 
 int main()
 {
-    File *fp;
+    FILE *fp;
     printf("Start writing into file\n");
     create();
     
