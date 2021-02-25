@@ -14,7 +14,7 @@ int main()
 {
     FILE *fp;
     emp *head=(emp *)malloc(sizeof(emp));
-    fp=fopen("EmployeeDB","rb");
+    fp=fopen("EmployeeDB","r");
     fread(&head,sizeof(emp),1,fp);
     printf("\n--------------Printing Details--------------------\n");
     printf("\nEmployee ID:- %s",head->empid);
