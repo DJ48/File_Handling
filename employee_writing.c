@@ -42,7 +42,7 @@ void create(){
 void display(){
     emp *temp=head;
     while(temp!=NULL){
-        printf(\n%s\t%s\t%s,temp->empid,temp->empname,temp->company);
+        printf("\n%s\t%s\t%s",temp->empid,temp->empname,temp->company);
         temp=temp->next;
     }
 }
