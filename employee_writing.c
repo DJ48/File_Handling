@@ -39,14 +39,6 @@ void create(){
     }
 }
 
-void display(){
-    emp *temp=head;
-    while(temp!=NULL){
-        printf("\n%s\t%s\t%s",temp->empid,temp->empname,temp->company);
-        temp=temp->next;
-    }
-}
-
 int main()
 {
     FILE *fp;
@@ -54,10 +46,13 @@ int main()
     create();
     
     fp=fopen("EmployeeDB","w");
-    fwrite(head,sizeof(*head),1,fp);
-    fputs("Hello DJ",fp);
     
-    display();
+    emp *temp=head;
+    while(temp != NULL){
+        fwrite(temp,sizeof(*temp),1,fp);
+        temp=temp->next;
+    }
+    fputs("Hello DJ",fp);
     printf("writing Done into EmployeeDB\n");
     fclose(fp);
     return 0;
