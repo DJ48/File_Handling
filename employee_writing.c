@@ -45,11 +45,11 @@ int main()
     printf("Start writing into file\n");
     create();
     
-    fp=fopen("EmployeeDB","w");
+    fp=fopen("EmployeeDB","wb");
     
     emp *temp=head;
     while(temp != NULL){
-        fwrite(&temp,sizeof(emp),1,fp);
+        fwrite(temp,sizeof(emp),1,fp);
         temp=temp->next;
     }
     fputs("Hello DJ",fp);
