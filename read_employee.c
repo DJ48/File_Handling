@@ -7,13 +7,13 @@ struct Employee{
 };
 
 int main(){
-    struct Employee emp[3];
+    struct Employee emp;
     int i;
     FILE *fp;
     fp=fopen("EmployeeDB","rb");
     printf("Reading From EmployeeDB ...\n");
-    fread(&emp[0],sizeof(struct Employee),1,fp);
-    printf("%s\t%s\t%s",emp[0].empid,emp[0].empname,emp[0].company);
+    fread(&emp,sizeof(struct Employee),1,fp);
+    printf("%s\t%s\t%s",emp.empid,emp.empname,emp.company);
     
     return 0;
 }
