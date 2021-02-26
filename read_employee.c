@@ -1,33 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 struct Employee{
     char empid[5];
     char empname[20];
-    char company[20];
-    struct Employee *next;
+    char company;
 };
 
-typedef struct Employee emp;
-
-int main()
-{
+int main(){
+    struct Employee emp[3];
+    int i;
     FILE *fp;
-    emp *head=(emp *)malloc(sizeof(emp));
     fp=fopen("EmployeeDB","rb");
-    fread(head,sizeof(emp),1,fp);
-    printf("\n--------------Printing Details--------------------\n");
-    printf("\nEmployee ID:- %s",head->empid);
-    printf("\tEmployee Name:- %s",head->empname);
-    printf("\tEmployee company:- %s\n",head->company);
-    printf("%s",head->next->empid);
-    while(fread(head,sizeof(emp),1,fp)){
-            printf("hesklk\n");
-            printf("\nEmployee ID:- %s",head->empid);
-            printf("\tEmployee Name:- %s",head->empname);
-            printf("\tEmployee company:- %s",head->company);
-            head=head->next;
-    }
-    fclose(fp);
+    printf("Reading From EmployeeDB ...\n");
+    fread(&emp[0],sizeof(struct Employee),1,fp);
+    printf("%s\t%s\t%s",emp[0].empid,emp[0].empname,emp[0].company);
+    
     return 0;
 }
