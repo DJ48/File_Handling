@@ -12,7 +12,7 @@ int main(){
     struct Employee emp[3];
     int i;
     FILE *fp;
-    fp=fopen("EmployeeDB","w");
+    fp=fopen("EmployeeDB.dat","w");
     for(i=0;i<3;i++){
         printf("\nEnter Id:- ");
         scanf("%s",&emp[i].empid);
