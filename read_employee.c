@@ -10,10 +10,10 @@ int main(){
     struct Employee emp;
     int i;
     FILE *fp;
-    fp=fopen("EmployeeDB","rb");
+    fp=fopen("EmployeeDB","r");
     printf("Reading From EmployeeDB ...\n");
     fread(&emp,sizeof(struct Employee),1,fp);
     printf("%s\t%s\t%s",emp.empid,emp.empname,emp.company);
-    
+    fclose(fp);
     return 0;
 }
