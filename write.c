@@ -3,20 +3,20 @@
 #include <string.h>
 
 // a structure to read and write
-struct customer {
+struct Employee {
    char  fname[20],lname[20];
-   int   acct_num;
-   float acct_balance;
+   char  id[5];
+   char company;
 };
 
 /**************************************/
-void main ()
+int main ()
 {
    FILE *outfile;
-   struct customer input;
+   struct Employee input;
 
    // open Accounts file for writing
-   outfile = fopen ("accounts.dat","w");
+   outfile = fopen ("EmployeeDB.dat","w");
    if (outfile == NULL)
      {
       fprintf(stderr, "\nError opening accounts.dat\n\n");
@@ -38,12 +38,13 @@ void main ()
       // continue reading from keyboard
       printf("Last Name : ");
       scanf ("%s", input.lname);
-      printf("Acct Num  : ");
-      scanf ("%d", &input.acct_num);
-      printf("Balance   : ");
-      scanf ("%f", &input.acct_balance);
+      printf("ID  : ");
+      scanf ("%s", input.id);
+      printf("Company   : ");
+      scanf ("%s", input.company);
 
       // write entire structure to Accounts file
-      fwrite (&input, sizeof(struct customer), 1, outfile);
+      fwrite (&input, sizeof(struct Employee), 1, outfile);
      }
+     return 0;
 }
