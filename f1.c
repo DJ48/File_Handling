@@ -24,8 +24,8 @@ int main ()
 		exit (1); 
 	} 
 		
-	struct person input[0] = {1, "rohan", "sharma"}; 
-	struct person input[1] = {2, "mahendra", "dhoni"}; 
+	input[0] = {1, "rohan", "sharma"}; 
+	input[1] = {2, "mahendra", "dhoni"}; 
 	
 	// write struct to file 
 	fwrite (&input[0], sizeof(struct person), 1, outfile); 
