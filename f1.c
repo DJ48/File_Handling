@@ -26,10 +26,10 @@ int main ()
 		
 	input[0].id = 1;
 	strcpy(input[0].fname,"rohan");
-	strcpy(input[0].fname,"sharma"}; 
+	strcpy(input[0].lname,"sharma"}; 
 	input[1].id = 2;
 	strcpy(input[1].fname,"mahendra");
-	strcpy(input[1].fname,"dhoni"}; 
+	strcpy(input[1].lname,"dhoni"}; 
 	
 	// write struct to file 
 	fwrite (&input[0], sizeof(struct person), 1, outfile); 
