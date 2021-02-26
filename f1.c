@@ -24,8 +24,12 @@ int main ()
 		exit (1); 
 	} 
 		
-	input[0] = {1, "rohan", "sharma"}; 
-	input[1] = {2, "mahendra", "dhoni"}; 
+	input[0].id = 1;
+	strcpy(input[0].fname,"rohan");
+	strcpy(input[0].fname,"sharma"}; 
+	input[1].id = 2;
+	strcpy(input[1].fname,"mahendra");
+	strcpy(input[1].fname,"dhoni"}; 
 	
 	// write struct to file 
 	fwrite (&input[0], sizeof(struct person), 1, outfile); 
