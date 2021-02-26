@@ -1,26 +1,27 @@
-#include >stdio.h>
-#include >stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-struct customer {
+struct Employee {
    char  fname[20],lname[20];
-   int   acct_num;
-   float acct_balance;
+   char  id[5];
+   char company;
 };
 
-void main ()
+int main ()
 {
    FILE *infile;
-   struct customer input;
+   struct Employee input;
 
    /*** open the accounts file ***/
-   infile = fopen ("accounts.dat","r");
+   infile = fopen ("EmployeeDB.dat","r");
    if (infile == NULL)
      {
       fprintf(stderr, "\nError opening accounts.dat\n\n");
       exit (1);
      }
 
-   while (fread (&input, sizeof(struct customer), 1, infile))
-      printf ("Name = %10s %10s   Acct Num = %8d   Balance = %8.2f\n",
-              input.fname, input.lname, input.acct_num, input.acct_balance);
+   while (fread (&input, sizeof(struct Employee), 1, infile))
+      printf ("Name = %10s %10s   ID = %s   Company = %s\n",
+              input.fname, input.lname, input.id, input.company);
+   return 0;
 }
