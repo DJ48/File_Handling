@@ -4,7 +4,7 @@
 struct Employee {
    char  fname[20],lname[20];
    char  id[5];
-   char company;
+   char company[10];
 };
 
 int main ()
