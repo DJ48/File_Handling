@@ -16,7 +16,7 @@ int main ()
    struct Employee input;
 
    // open Accounts file for writing
-   outfile = fopen ("EmployeeDB.dat","w");
+   outfile = fopen ("EmployeeDB.dat","wb");
    if (outfile == NULL)
      {
       fprintf(stderr, "\nError opening accounts.dat\n\n");
