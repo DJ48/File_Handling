@@ -13,7 +13,7 @@ int main ()
    struct Employee input;
 
    /*** open the accounts file ***/
-   infile = fopen ("EmployeeDB.dat","rb");
+   infile = fopen ("EmployeeDB.dat","r");
    if (infile == NULL)
      {
       fprintf(stderr, "\nError opening accounts.dat\n\n");
